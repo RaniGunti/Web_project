@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="overlay">
+            <h1>Welcome to Our Healthcare Services</h1>
+            <p>Your health and well-being are our top priorities. We offer comprehensive and compassionate care tailored to your needs.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="overlay">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Primary Care</h3>
+                <p>Comprehensive care for all ages because your health is our responsibility.</p>
+                <p>Every single one of us deserves access to quality and affordable health care.</p>
+            </div>
+            <div class="service">
+                <h3>Emergency Services</h3>
+                <p>24/7 emergency care available.</p>
+                <p>"Special care for Pregnant women"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="overlay">
+            <h2>About Us</h2>
+            <p>Join us on this journey towards better health—where every individual is valued, and every story matters.</p>
+        </div>
+    </section>
+    
+    <section id="mission-vision">
+        <div class="overlay">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission-vision-content">
+                <div class="mission">
+                    <h3>Mission</h3>
+                    <p>Our mission is to provide high-quality, compassionate healthcare to all individuals and families, with a focus on improving community health through accessible and personalized care.</p>
+                </div>
+                <div class="vision">
+                    <h3>Vision</h3>
+                    <p>We envision a future where everyone has access to equitable healthcare, powered by innovation, education, and a commitment to wellness and patient-centered care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="overlay">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+</body>
+</html>
